@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Képgaléria perspektívával</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MonteCarlo&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<!--
+Megj: Perspective forrása, ezt írtam át:     
+https://3dtransforms.desandro.com/perspective
+eleje: https://codepen.io/HassaanALalosy/pen/PNBMVG
+    <div class="content">
+        <div class="box b1">
+            <span class="text">Harmony</span>
+        </div>
+        <div class="box b2">
+            <span class="text">Sunrise <br> Sunrise Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id orci non leo faucibus vulputate in sit amet nibh. Duis pretium, ligula eget ullamcorper aliquet, lectus elit pulvinar dolor, sed auctor massa erat sed metus.</span>
+       </div>
+        <div class="box b3">
+            <span class="text">Thank You!</span>
+       </div>
+    </div>
+    <div style="color:#fff; text-align:center; font-family:sans-serif; font-size:12px;">
+    </div>
+vége: https://codepen.io/HassaanALalosy/pen/PNBMVG
+
+eleje: saját perspective eleje
+    <section id="pers">
+        <div class="harom ajto b">
+            <p class="pharom pajto pb" >Harmony</p>
+        </div>
+        <div class="harom kozep">
+            <p class="pharom pkozep pcim" >Sunrise</p>
+            <p class="pharom pkozep pszoveg">Sunrise Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id orci non leo faucibus vulputate in sit amet nibh. Duis pretium, ligula eget ullamcorper aliquet, lectus elit pulvinar dolor, sed auctor massa erat sed metus.</p>
+        </div>
+        <div class="harom ajto j">
+            <p class="pharom pajto pj" >Thank You!</p>
+        </div>
+    </section>
+vége: saját perspective vége
+ -->
+
+
+
+
+
+<main>
+
+    <h1>Harmonythankyou</h1>
+
+
+    <div id="egymasmogott">
+
+            <!-- képdobozban kép eleje -->
+            <section id="kepdoboz">
+                <img class="kep"> 
+            </section>
+            <!-- képdobozban kép vége -->
+
+        
+            <!-- saját perspective eleje -->
+            <section id="pers">
+                <div class="harom ajto b">
+                    <p class="pharom pajto pb" >Harmony <br> /with openable doors/</p>
+                </div>
+                <div class="harom kozep">
+                    <p class="pharom pkozep pcim clicked" >Sunrise</p>
+                    <p class="pharom pkozep pszoveg szoveg">Sunrise Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer id orci non leo faucibus vulputate in sit amet nibh. Duis pretium, ligula eget ullamcorper aliquet, lectus elit pulvinar dolor, sed auctor massa erat sed metus.</p>
+                </div>
+                <div class="harom ajto j">
+                    <p class="pharom pajto pj" >Thank You!</p>
+                </div>
+            </section>
+            <!-- saját perspective vége -->
+    
+    </div>
+
+
+    <div id="kezelo">
+
+            <button class="button" id="de"> Description</button>
+            <div class="nyildoboz" >
+                <img class="nyil balra" src="images/arrow.svg" alt="nyíl balra">
+            </div>
+            <div class="alcimdoboz">
+                <h3 class="clicked alcim"> </h3>
+            </div>
+            <div class="nyildoboz" >
+                <img class="nyil jobbra" src="images/arrow.svg" alt="nyíl jobbra">
+            </div>
+            <button class="button" id="im"> Image</button>
+    </div>
+
+
+    <div id="keptarvalaszto">
+        <!-- <div class="thumbnail">  <img class="kiskep" src="images/Sunrise.webp" alt="Sunrise">  </div>
+        <div class="thumbnail">  <img class="kiskep" src="images/WaterSkyRainbow.png" alt="WaterSkyRainbow">  </div> -->
+    </div>
+
+</main>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+<script src="data.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+
+/* Betűméretre és ahhoz tartoó @media-ra: Reszponzív tipográfia (Mérei Tamás 2021.01.05., font-size: 6px;) */
+html {
+    font-size: calc(0.1rem + 0.6vmin);
+}
+
+body {
+    background-color: #b09282;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    width: 100vw;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main {
+    background-image: linear-gradient( 
+        rgba(255, 255, 255, 0.4), 
+        rgba(255, 255, 255, 0.4)), url("imageArunachala/hatter.jfif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: border-box;
+    background-attachment: local;
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* H1 */
+h1 {
+    transition: color 5s;
+
+    height: 7%;
+    font-size: calc(0.1rem + 5.0vmin);
+    margin-bottom: calc(0.1rem + 3.5vmin);
+    margin: 0;
+    padding: 0;
+    color:rgb(184, 155, 184);
+    text-align: center;
+    font-family: 'MonteCarlo', cursive;
+}
+
+h1:hover {
+    color: white;
+}
+
+
+
+/* EGYMÁS MÓGÓTT */
+#egymasmogott {
+    position: relative;
+    height: 65%;
+}
+
+
+/* PERSPEKTÍVA */
+/* #pers  saját perspective eleje */
+/* Mi alapján: https://codepen.io/HassaanALalosy/pen/PNBMVG   https://3dtransforms.desandro.com/perspective*/
+#pers {
+    height: 100%;
+    /* visibility: hidden; */
+    opacity: 0.0;
+    z-index: -1;
+    position: absolute;
+    display: flex;
+    width: 100%;
+}
+
+.harom {
+    width: 33.33%;
+	background-color: #eddbf4;
+	border-radius: 5%;
+	transition: 0.5s ease-in;
+}
+
+.b {
+    transform-origin: left center;
+}
+
+.b:hover {
+transform: perspective(300px) rotatey(45deg);
+opacity: 0.8;
+}
+
+.kozep {
+transform-origin: bottom center;
+}
+
+.kozep:hover {
+opacity: 0.8;
+transform: perspective(300px) rotatex(45deg);
+}
+
+.j {
+transform-origin: right center;
+}
+
+.j:hover {
+opacity: 0.8;
+transform: perspective(300px) rotatey(-45deg);
+}
+
+.pajto {
+    text-align: center;
+	margin-top: 50%;
+    margin-bottom: 50%;
+    font-size: calc(0.1rem + 6vmin);
+    font-family: 'MonteCarlo', cursive;
+}
+
+.pkozep {
+    text-align: center;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.pcim {
+    font-size: calc(0.1rem + 4vmin);
+    margin-top: 10%;
+    margin-bottom: 12%;
+}
+
+.pszoveg {
+    font-size: calc(0.1rem + 3vmin);
+}
+/* #pers  saját perspective vege */
+
+.szoveg {
+    text-align: center;
+    margin-left: 8%;
+    margin-right: 8%;
+    line-height: calc(0.1rem + 4vmin);
+}
+
+
+
+/* KÉPDOBOZBAN KÉP eleje */
+#kepdoboz {
+    position: absolute;
+    height: 100%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.kep {
+    display: block;
+    height: 100%;
+    border-radius: 1%;
+    box-shadow: 0 30px 40px -20px rgba(0,0,0,0.5);
+}
+/* képdobozban kép vége */
+
+
+
+/* KEZELŐ */
+#kezelo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 8%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.button {
+    display: inline-block;
+    width: 14%;
+    padding: 1px;
+    border: 0;
+    border-style: none;
+    align-items: flex-start;
+    font-size: calc(0.1rem + 1.6vw);
+    background-color: rgb(159, 135, 126);
+    border-radius: 18%;
+    box-shadow: -1px 5px 4px 2px rgb(78, 78, 78);
+}
+
+.button:hover {
+    background: linear-gradient( 
+        rgba(159, 135, 126),
+        rgb(52, 94, 107));
+        border: 0;
+    border-style: none;
+}
+
+
+.nyildoboz {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 6%;
+}
+
+.nyil {
+    position: absolute;
+    height: 80%;
+    display: block;
+    /* filter: invert(40%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(110%) contrast(1.19%); */
+    /* Megj: Eredeti: filter: invert(40%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(110%) contrast(119%); */
+}
+
+.nyil:hover {
+    /* Megj: CSS filter generator:   https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(95%) sepia(6%) saturate(763%) hue-rotate(320deg) brightness(73%) contrast(92%);
+    transition: 1s;
+}
+
+.balra {
+    right: 0;
+    /* margin-left: calc(0.1rem + 5vw); */
+    }
+
+.jobbra {
+    right: auto;
+    transform: rotate(180deg);
+    /* float: right; */
+    /* margin-right:calc(0.1rem + 1vw); */
+}
+
+.alcimdoboz {
+    width: 60%;
+}
+
+.alcim {
+    font-size: calc(0.1rem + 3.5vmin);
+    color: black;
+    transition: color 5s;
+}
+
+.alcim:hover {
+    color: rgb(180, 24, 24);
+}
+
+.clicked {
+    text-align: center;
+}
+
+
+
+/* INDEXKÉPEK FLEXEZVE*/
+#keptarvalaszto {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    height: 10%;
+    margin-top: calc(0.1rem + 3.5vh);
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thumbnail {
+    display: flex;
+    width: calc(0.1rem + 3.5vw);
+    height: calc(0.1rem + 3.5vw);
+    margin: calc(0.1rem + 0.6vw);
+    border-radius: 6%;
+    opacity: 0.2;
+}
+
+.kiskep {
+    flex: 1;
+    border: 2px double rgb(172, 44, 44);
+    width: 100%;
+    height: 100%;
+    border-radius: 1%;
+}
+
+.thumbnail:hover {
+    transform: scale(1.3);
+    opacity: 0.9;
+}
+
+/* Jelzi, hogy hol tartok. */
+.op {
+    opacity: 0.5;
+    box-shadow: 0 2px 3px -2px rgb(185, 79, 79);
+}
+
+
+
+/* ..................................................................... */
+/* FEKVŐ KÉPERNYŐ */
+/* @media(min-width) Betűméret */
+@media(min-width:480px) {
+    html {
+        font-size: calc(1em+1.4vw);
+    }
+}
+
+/* @media(min-width) Magasság (képdoboz-magasság), Fekvő képernyőnél
+
+@media(min-width:1000px) {
+    #kepdoboz {
+        height: 65vh;
+    }
+
+    .thumbnail {
+        border: 5px double rgb(172, 44, 44);
+    }
+} */
+
+
+
+/* ÁLLÓ KÉPERNYŐ */
+/* @media(orientation:portrait) Szélesség (képdoboz-szélesség), Álló képernyőnél */
+@media(orientation:portrait) {
+    #kepdoboz {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .kep {
+        display: inline-block;
+        /* vertical-align: middle; */
+        width: auto;
+        min-width: 70%;
+        max-width: 100%;
+        height: auto;
+        max-height: 100%;
+        box-shadow: 0 30px 40px -20px rgba(0,0,0,0.5);
+    }
+
+    .thumbnail {
+        width: calc(0.1rem + 5.5vmin);
+        height: calc(0.1rem + 4.5vmin);
+    }
+    
+    .button {
+        width: 14%;
+    }
+
+    .nyildoboz {
+        width: 15%;
+    }
+    
+    .nyil {
+        height: 70%;
+    }
+
+    .alcimdoboz {
+        width: 42%;
+    }
+}
